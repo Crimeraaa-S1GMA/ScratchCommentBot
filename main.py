@@ -18,9 +18,13 @@ session = scratchclient.ScratchSession(config_loaded["userName"], config_loaded[
 
 session.login(config_loaded["password"])
 
+if config_loaded["inclFeaturedProjects"]:
+    for frontProj in session.get_front_page()["featured_projects"]:
+        project_ids.append(frontProj.id)
+
 while True:
     for p in project_ids:
-        project = session.get_project(p)
+        project = session.get_project(int(p))
         try:
             if project.comments_allowed:
                 project.post_comment(
