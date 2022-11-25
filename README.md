@@ -9,5 +9,4 @@ Python 3
 
 ## To-do list
 - more configurablity lol
-- add featured projects to project list
 - option to constantly loop through project comment sections
