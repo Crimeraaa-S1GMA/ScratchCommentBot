@@ -1,5 +1,5 @@
 {
   "userName" : "YourUsername",
   "password" : "YourPassword",
-  "inclFeaturedProjects" : false
+  "useFeaturedTab" : true
 }

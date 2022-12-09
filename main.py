@@ -18,7 +18,8 @@ session = scratchclient.ScratchSession(config_loaded["userName"], config_loaded[
 
 session.login(config_loaded["password"])
 
-if config_loaded["inclFeaturedProjects"]:
+if config_loaded["useFeaturedTab"]:
+    project_ids.clear()
     for frontProj in session.get_front_page()["featured_projects"]:
         project_ids.append(frontProj.id)
 
